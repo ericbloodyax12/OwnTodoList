@@ -1,0 +1,8 @@
+.tasks-container{
+    background-color: antiquewhite;
+
+}
+.tasks-container__task{
+    margin: 0 0 20px 0;
+
+}
