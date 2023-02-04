@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {ChangeEvent, useState} from 'react';
 import './App.css';
+import {TodoListHeader} from "./components/todolistHeader/TodoListHeader";
+import {TasksContainer} from "./components/TasksContainer/TasksContainer";
+import {todoList} from "./taskList";
 
 function App() {
+    let [taskTitle,setTaskTitle] = useState("") ;
+    let [tasks,setTasks] =useState(todoList);
+
+
+    const changeInputValue = (e:ChangeEvent<HTMLInputElement>) => {
+       setTaskTitle(e.currentTarget.value.trim())
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoListHeader setTasks={setTasks} value={taskTitle} changeInputValue={changeInputValue} tasks={tasks}/>
+      <TasksContainer setTasks={setTasks} tasks={tasks} />
     </div>
   );
 }

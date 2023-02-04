@@ -1,0 +1,27 @@
+header{
+    background-color: red;
+}
+.header-input-block{
+    margin: 0px 20px;
+    background-color: #61dafb;
+}
+.header-input{
+    width: calc(100% - 20px - 6px - 2px);
+    height: 20px;
+
+}
+.header-title{
+    color: white;
+}
+.header-button--add{
+  background-color: rgba(82, 153, 188, 0.0);
+   outline: none;
+    border: none;
+}
+.header-input-block .header-button--add{
+    width: 20px;
+    cursor: pointer;
+    background-color: black;
+    border: 2px inset grey;
+
+}

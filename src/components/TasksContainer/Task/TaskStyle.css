@@ -1,0 +1,37 @@
+.task-container{
+    display: flex;
+    width: 100%;
+    background-color: rgb(1 2 2);
+    justify-content: space-between;
+
+}
+.task{
+    width: calc(100% - 40px);
+    padding: 10px 0px 10px 20px;
+    color: white;
+    background-color: rgb(1 2 2);
+    text-align: start;
+
+}
+.task:hover{
+    background-color: rgb(91 99 103);
+}
+.task__button{
+    width: 40px;
+    color: white;
+    background-color: black;
+
+}
+.task__button:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.task.task__done{
+    text-decoration: line-through;
+    background-color: cadetblue;
+
+}
+.task.task__done::before{
+    content: "♥";
+}
